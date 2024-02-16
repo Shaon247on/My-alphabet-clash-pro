@@ -5,10 +5,18 @@
 //     palyGroundSection.classList.remove('hidden')
 // }
 
+function handleKeyboardButtonPress(){
+    console.log('button pressed')
+}
+
+document.addEventListener('keyup', handleKeyboardButtonPress)
+
 function continueGame(){
-    // step - 1: gemerate a random aplhabet
     const alphabet = getARandomAlphabet();
-    console.log('Your random alphabet is:', alphabet)
+    const displayRandom = document.getElementById("display-random")
+    displayRandom.innerText = alphabet
+    setBackgroundColorById(alphabet)
+
 }
 
 
