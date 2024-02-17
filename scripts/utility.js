@@ -33,3 +33,13 @@ function getTextElementValueById(elementId){
     const elementValue = parseFloat(elementValueText)
     return elementValue
 }
+
+function setTextElementValueId(elementId, value){
+    const element = document.getElementById(elementId)
+    element.innerText =value
+}
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId)
+    const text = element.innerText
+    return text
+}
