@@ -22,24 +22,33 @@ function handleKeyboardPressEvent(event) {
         console.log('You got a Point')
         console.log('you have pressed correctly', expectedAlphabet)
         // score update 
-        let currentScoreElement = document.getElementById('current-score')
-        const currentScoreInnerText = currentScoreElement.innerText
-        const currentScore = parseFloat(currentScoreInnerText)
-        console.log(currentScore)
-        const newScore = currentScore + 1
-        currentScoreElement.innerText = newScore
+        // let currentScoreElement = document.getElementById('current-score')
+        // const currentScoreInnerText = currentScoreElement.innerText
+        // const currentScore = parseFloat(currentScoreInnerText)
+        // console.log(currentScore)
+        // const newScore = currentScore + 1
+        // currentScoreElement.innerText = newScore
         // start a new round 
+
+        // alternative or function way 
+
+        const currentScore = getTextElementValueById('current-score')
+        console.log(currentScore)
+
         continueGame()
         removeBackgroundColorById(expectedAlphabet)
     }
     else{ 
         console.log('You lost a Life')
-        let currentLifeElement = document.getElementById('current-life')
-        const currentLifeInnertext = currentLifeElement.innerText
-        const currentLife = parseFloat(currentLifeInnertext)
-        let newLife = currentLife -1
-        currentLifeElement.innerText = newLife
+        // let currentLifeElement = document.getElementById('current-life')
+        // const currentLifeInnertext = currentLifeElement.innerText
+        // const currentLife = parseFloat(currentLifeInnertext)
+        // let newLife = currentLife -1
+        // currentLifeElement.innerText = newLife
     
+        // alternative or function way 
+
+
     }
 }
 

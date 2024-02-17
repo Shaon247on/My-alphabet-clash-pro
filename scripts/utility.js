@@ -26,3 +26,10 @@ function getARandomAlphabet(){
     return alphabet
 }
 
+
+function getTextElementValueById(elementId){
+    const element = document.getElementById(elementId)
+    const elementValueText = element.innerText
+    const elementValue = parseFloat(elementValueText)
+    return elementValue
+}
